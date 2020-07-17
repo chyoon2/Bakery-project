@@ -25,8 +25,8 @@ _This program tells you about the specials at Pierre's Bakery for Bread and Past
 |   The Program will take an input of a integer of bread units.   |   "5"   |   N/A   |    Y   |
 |    The Program will take an input of a integer of pastry units.   |   "2"    |     N/A    |    Y   |
 | The Program will output a total cost of the bread and pastry combined. | "2" , "2" | "Your Total is $7" | Y |
-| |   |     |      |
-|  | |  |      |
+| The Program will ask the user for a bread or pastry input.| N/A |  "Do you want bread or pastries"   |   Y   |
+| The Program will ask the if they would like to add more bread or pastries | "2" | "Would You like to buy more bread/pastries" |   Y   |
 
 ## Known Bugs
 _There are no known bugs_

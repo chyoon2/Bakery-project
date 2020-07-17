@@ -15,9 +15,6 @@ namespace Bakery.Models
       int breadTotal = newBread.CalculateCost();
       int pastryTotal = newPastry.CalculateCost();
 
-
-
-
       string purchase = "";
       Console.WriteLine("What would you like today? (Bread/Pastry)");
       purchase = (Console.ReadLine()).ToUpper();
@@ -79,18 +76,5 @@ namespace Bakery.Models
     }
   }
 }
-      // int total = breadTotal + pastryTotal;
-      // Console.WriteLine("Your total is $" + total);
-     
 
     
-
-    // List<IDataAccess> databases = new List<IDataAccess>() {
-    //   new Pastry(),
-    //   new Bread()
-    // };
-    // foreach(int x in databases)
-    // {
-    //   Console.WriteLine(x.CalculateBreadCost(2));
-    //   Console.WriteLine(x.CalculatePastryCost(2));
-    // }
