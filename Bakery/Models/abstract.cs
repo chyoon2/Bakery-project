@@ -1,7 +1,7 @@
- public abstract class Bake
+namespace Bakery.Models
+{
+public abstract class Bake
   {
-    public virtual void CalculateCost()
-    {
-      
-    }
+  
   }
+}

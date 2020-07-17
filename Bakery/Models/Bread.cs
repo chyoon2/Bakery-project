@@ -2,20 +2,40 @@ using System;
 
 namespace Bakery.Models
 {
-  public class Bread: IDataAccess
+  public class Bread
   {
-    // public int UserBread { get; }
+    public int UserBread { get; }
 
-    // public Bread(int breadInput)
-    // {
-    //   UserBread = breadInput;
-    // }
-    
-    public int CalculateCost(int userBread ) 
+    public Bread(int breadInput)
     {
-      int cost = (userBread - (userBread/2)) * 5;
+      UserBread = breadInput;
+    }
+    
+    public int CalculateBreadCost(int UserBread ) 
+    {
+      int cost = (UserBread - (UserBread/2)) * 5;
       return cost;
     }
 
   }
 }
+
+// namespace Bakery.Models
+// {
+//   public class Bread
+//   {
+//     public int UserBread { get; }
+
+//     public Bread(int breadInput)
+//     {
+//       UserBread = breadInput;
+//     }
+    
+//     public int CalculateCost(int UserBread ) 
+//     {
+//       int cost = (UserBread - (UserBread/2)) * 5;
+//       return cost;
+//     }
+
+//   }
+// }
