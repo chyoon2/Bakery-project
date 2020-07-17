@@ -24,7 +24,7 @@ namespace Bakery.Tests
      [TestMethod]
     public void CalculatePastryCost_ReturnsCost_Int()
     {
-      int testPastry = 5;
+      int testPastry = 7;
       Pastry newPastry = new Pastry(testPastry);
       int testCost = 15;
       int result = newPastry.CalculatePastryCost();
