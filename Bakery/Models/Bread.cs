@@ -20,7 +20,7 @@ namespace Bakery.Models
       return _queue;
     }
     
-    public int CalculateBreadCost() 
+    public int CalculateCost() 
     {
       int amt = _queue.AsQueryable().Sum();
       int cost = (amt - (amt/2)) * 5;

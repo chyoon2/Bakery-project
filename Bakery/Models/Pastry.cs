@@ -21,7 +21,7 @@ namespace Bakery.Models
       return _queue;
     }
 
-    public int CalculatePastryCost() 
+    public int CalculateCost() 
     {
       int amt = _queue.AsQueryable().Sum();
      
