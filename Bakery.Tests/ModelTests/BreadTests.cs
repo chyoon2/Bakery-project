@@ -15,7 +15,7 @@ namespace Bakery.Tests
     }
 
     [TestMethod]
-    public void GetBreadNumber_ReturnsBreadNumber_Int()
+    public void GetBreadInput_ReturnsBreadInput_Int()
     {
       int testBread = 5;
       Bread newBread = new Bread(testBread);
