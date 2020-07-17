@@ -28,7 +28,7 @@ namespace Bakery.Tests
     {
       int testBread = 5;
       Bread newBread = new Bread(testBread);
-      int testCost = 35;
+      int testCost = 15;
       int result = newBread.CalculateCost();
 
       Assert.AreEqual(testCost, result);
