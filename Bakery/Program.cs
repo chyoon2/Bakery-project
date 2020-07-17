@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 
 namespace Bakery.Models
 {
@@ -18,11 +19,11 @@ namespace Bakery.Models
 
       
       Bread newBread = new Bread(breadInput);
-      int breadCost = newBread.CalculateBreadCost(breadInput);
+      int breadCost = newBread.CalculateBreadCost();
 
       
       Pastry newPastry = new Pastry(pastryInput);
-      int pastryCost = newPastry.CalculatePastryCost(pastryInput);
+      int pastryCost = newPastry.CalculatePastryCost();
 
       int total = breadCost + pastryCost;
       Console.WriteLine("Your total is $" + total);

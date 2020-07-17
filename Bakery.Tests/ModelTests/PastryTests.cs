@@ -6,8 +6,13 @@ using System;
 namespace Bakery.Tests
 {
   [TestClass]
-  public class PastryTests
+  public class PastryTests : IDisposable
   {
+    public void Dispose()
+    {
+    Pastry.ClearAll();
+    }
+
     [TestMethod]
     public void PastryConstructor_CreatesInstanceofPastry_Pastry()
     {
@@ -27,8 +32,10 @@ namespace Bakery.Tests
     {
       int testPastry = 7;
       Pastry newPastry = new Pastry(testPastry);
-      int testCost = 12;
-      int result = newPastry.CalculatePastryCost(testPastry);
+      newPastry.AddToList(5);
+      int testCost = 9;
+      int result = newPastry.CalculatePastryCost();
+
       Assert.AreEqual(testCost, result);
     }
     [TestMethod]
@@ -38,7 +45,7 @@ namespace Bakery.Tests
       Pastry newPastry = new Pastry (testEntry);
       List<int> testList = new List<int> {1};
 
-      List<int> result = newPastry.AddToList(4);
+      List<int> result = newPastry.AddToList(1);
 
       CollectionAssert.AreEqual(testList, result);
     }

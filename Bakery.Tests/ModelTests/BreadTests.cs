@@ -6,8 +6,13 @@ using System;
 namespace Bakery.Tests
 {
   [TestClass]
-  public class BreadTests
+  public class BreadTests: IDisposable
   {
+    public void Dispose()
+    {
+    Bread.ClearAll();
+    }
+
     [TestMethod]
     public void BreadConstructor_CreatesInstanceofBread_Bread()
     {
@@ -29,9 +34,20 @@ namespace Bakery.Tests
       int testBread = 5;
       Bread newBread = new Bread(testBread);
       int testCost = 15;
-      int result = newBread.CalculateBreadCost(testBread);
+      int result = newBread.CalculateBreadCost();
 
       Assert.AreEqual(testCost, result);
+    }
+    [TestMethod]
+    public void AddToList_ReturnsList_List()
+    {
+      int testEntry = 1;
+      Bread newBread = new Bread (testEntry);
+      List<int> testList = new List<int> {1};
+
+      List<int> result = newBread.AddToList(1);
+
+      CollectionAssert.AreEqual(testList, result);
     }
   }
 }
