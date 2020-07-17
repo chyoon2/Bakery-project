@@ -8,7 +8,7 @@ namespace Bakery.Models
   {
     public int UserBread { get; }
     private static List <int> _queue = new List<int> {};
-    
+
     public Bread(int breadInput)
     {
       UserBread = breadInput;
@@ -20,14 +20,16 @@ namespace Bakery.Models
       return _queue;
     }
     
-    public int CalculateBreadCost( ) 
+    public int CalculateBreadCost() 
     {
-      int cost = (UserBread - (UserBread/2)) * 5;
+      int amt = _queue.AsQueryable().Sum();
+      int cost = (amt - (amt/2)) * 5;
       return cost;
     }
+
      public static void ClearAll()
     {
-      // _queue.Clear();
+      _queue.Clear();
     }
   }
 }
