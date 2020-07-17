@@ -11,11 +11,9 @@ namespace Bakery.Models
       UserPastry = pastryInput;
     }
     public int CalculatePastryCost() 
-  {
-    int fiveDollarPastry = (UserPastry/3);
-    int twoDollarPastry = UserPastry % 3;
-    int cost = (twoDollarPastry * 2) + (fiveDollarPastry * 5);
-    return cost;
-  }
+    {
+      int cost = ((UserPastry/3)*5)+((UserPastry % 3)*2);
+      return cost;
+    }
   }
 }
