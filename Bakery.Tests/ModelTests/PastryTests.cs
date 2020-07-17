@@ -17,7 +17,7 @@ namespace Bakery.Tests
     public void GetPastryInput_ReturnsPastryInput_Int()
     {
       int testPastry = 5;
-      Pastry newPastry = new Pastry(testBread);
+      Pastry newPastry = new Pastry(testPastry);
       int result = newPastry.UserPastry;
       Assert.AreEqual(testPastry, result);
     }

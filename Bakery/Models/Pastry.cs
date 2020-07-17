@@ -6,6 +6,12 @@ namespace Bakery.Models
 {
   public class Pastry
   {
+    public int UserPastry { get; }
+
+    public Pastry(int pastryInput)
+    {
+      UserPastry = pastryInput;
+    }
     
   }
 }
