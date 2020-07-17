@@ -13,6 +13,16 @@ namespace Bakery.Models
     UserBread = breadInput;
   }
   
+  public int CalculateCost() 
+  {
+    int freeBread = (UserBread/2);
+    int breadPaidInFull = UserBread - freeBread;
+    Console.WriteLine(breadPaidInFull);
+    int cost = breadPaidInFull * 5;
+    Console.WriteLine(cost);
+    return cost;
+  }
+
   }
 }
 
