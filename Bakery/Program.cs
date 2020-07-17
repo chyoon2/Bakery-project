@@ -25,8 +25,8 @@ namespace Bakery.Models
         purchase = (Console.ReadLine()).ToUpper();
       }
   
-      string answer = ""; 
-      while(!(answer == "no"))
+       
+      while(!(purchase == "no"))
       {
         if (purchase == "BREAD")
         {
@@ -37,15 +37,15 @@ namespace Bakery.Models
           breadTotal = newBread.CalculateCost();
           Console.WriteLine("Your running total is: $" + (pastryTotal+breadTotal));
           Console.WriteLine("Would you like to add Pastries?(Y/N)");
-          answer = (Console.ReadLine()).ToUpper();
+          purchase = (Console.ReadLine()).ToUpper();
 
-          if (answer == "Y")
+          if (purchase == "Y")
           {
             purchase = "PASTRY";
           }
           else
           {
-            answer = "no";
+            purchase = "no";
           }
         }
 
@@ -58,14 +58,14 @@ namespace Bakery.Models
           pastryTotal = newPastry.CalculateCost();
           Console.WriteLine("Your running total is: $" + (pastryTotal+breadTotal));
           Console.WriteLine("Do you add more bread?(Y/N)");
-          answer = (Console.ReadLine()).ToUpper();
-          if (answer == "Y")
+          purchase = (Console.ReadLine()).ToUpper();
+          if (purchase == "Y")
           {
             purchase = "BREAD";
           }
           else
           {
-            answer = "no";
+            purchase = "no";
           }
         }  
       }
@@ -76,5 +76,3 @@ namespace Bakery.Models
     }
   }
 }
-
-    
