@@ -4,16 +4,16 @@ namespace Bakery.Models
 {
   public class Bread: IDataAccess
   {
-    public int UserBread { get; }
+    // public int UserBread { get; }
 
-    public Bread(int breadInput)
-    {
-      UserBread = breadInput;
-    }
+    // public Bread(int breadInput)
+    // {
+    //   UserBread = breadInput;
+    // }
     
-    public int CalculateBreadCost() 
+    public int CalculateCost(int userBread ) 
     {
-      int cost = (UserBread - (UserBread/2)) * 5;
+      int cost = (userBread - (userBread/2)) * 5;
       return cost;
     }
 
