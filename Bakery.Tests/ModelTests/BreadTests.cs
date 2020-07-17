@@ -23,5 +23,14 @@ namespace Bakery.Tests
       int result = newBread.UserBread;
       Assert.AreEqual(testBread, result);
     }
+    public void CalculateCost_ReturnsCost_Int()
+    {
+      int testBread = 5;
+      Bread newBread = new Bread(testBread);
+      int testCost = 10;
+      int result = newBread.CalculateCost;
+      Assert.AreEqual(testCost, result);
+    }
+
   }
 }
