@@ -12,10 +12,10 @@ namespace Bakery.Models
       
       Bread newBread = new Bread(0);
       Pastry newPastry = new Pastry(0);
-      int breadTotal = newBread.CalculateCost();
-      int pastryTotal = newPastry.CalculateCost();
-
+      int breadTotal= 0;
+      int pastryTotal=0;
       string purchase = "";
+
       Console.WriteLine("What would you like today? (Bread/Pastry)");
       purchase = (Console.ReadLine()).ToUpper();
 
@@ -26,7 +26,7 @@ namespace Bakery.Models
       }
   
        
-      while(!(purchase == "no"))
+      while(!(purchase == "NO"))
       {
         if (purchase == "BREAD")
         {
@@ -36,16 +36,20 @@ namespace Bakery.Models
           newBread.AddToList(breadInput);
           breadTotal = newBread.CalculateCost();
           Console.WriteLine("Your running total is: $" + (pastryTotal+breadTotal));
-          Console.WriteLine("Would you like to add Pastries?(Y/N)");
+          Console.WriteLine("Would you like to add Pastries?(Yes/No)");
           purchase = (Console.ReadLine()).ToUpper();
-
-          if (purchase == "Y")
+          while (!(purchase == "YES" || purchase == "NO"))
+          {
+            Console.WriteLine("Please answer YES or NO");
+            purchase = (Console.ReadLine()).ToUpper();
+          }
+          if (purchase == "YES")
           {
             purchase = "PASTRY";
           }
           else
           {
-            purchase = "no";
+            purchase = "NO";
           }
         }
 
@@ -57,15 +61,20 @@ namespace Bakery.Models
           newPastry.AddToList(pastryInput);
           pastryTotal = newPastry.CalculateCost();
           Console.WriteLine("Your running total is: $" + (pastryTotal+breadTotal));
-          Console.WriteLine("Do you add more bread?(Y/N)");
+          Console.WriteLine("Would you like to add Bread?(Yes/No)");
           purchase = (Console.ReadLine()).ToUpper();
-          if (purchase == "Y")
+          while (!(purchase == "YES" || purchase == "NO"))
+          {
+            Console.WriteLine("Please answer YES or NO");
+            purchase = (Console.ReadLine()).ToUpper();
+          }
+          if (purchase == "YES")
           {
             purchase = "BREAD";
           }
           else
           {
-            purchase = "no";
+            purchase = "NO";
           }
         }  
       }
