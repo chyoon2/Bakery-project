@@ -26,7 +26,7 @@ namespace Bakery.Tests
     {
       int testPastry = 7;
       Pastry newPastry = new Pastry(testPastry);
-      int testCost = 15;
+      int testCost = 12;
       int result = newPastry.CalculatePastryCost();
 
       Assert.AreEqual(testCost, result);
