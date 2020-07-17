@@ -6,7 +6,7 @@ namespace Bakery.Models
 {
   public class Bread
   {
-    
+    public int UserBread { get; }
   }
 }
 
