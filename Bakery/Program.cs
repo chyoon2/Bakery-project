@@ -7,7 +7,7 @@ namespace Bakery.Models
     public static void Main ()
     {
       Bread newBread = new Bread(5);
-      newBread.CalculateCost();
+      newBread.CalculateBreadCost();
 
     }
   }

@@ -23,12 +23,12 @@ namespace Bakery.Tests
       Assert.AreEqual(testBread, result);
     }
     [TestMethod]
-    public void CalculateCost_ReturnsCost_Int()
+    public void CalculateBreadCost_ReturnsCost_Int()
     {
       int testBread = 5;
       Bread newBread = new Bread(testBread);
       int testCost = 15;
-      int result = newBread.CalculateCost();
+      int result = newBread.CalculateBreadCost();
 
       Assert.AreEqual(testCost, result);
     }

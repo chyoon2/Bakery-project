@@ -13,7 +13,7 @@ namespace Bakery.Models
     UserBread = breadInput;
   }
   
-  public int CalculateCost() 
+  public int CalculateBreadCost() 
   {
     int freeBread = (UserBread/2);
     int breadPaidInFull = UserBread - freeBread;

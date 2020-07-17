@@ -21,5 +21,15 @@ namespace Bakery.Tests
       int result = newPastry.UserPastry;
       Assert.AreEqual(testPastry, result);
     }
+     [TestMethod]
+    public void CalculatePastryCost_ReturnsCost_Int()
+    {
+      int testPastry = 5;
+      Pastry newPastry = new Pastry(testPastry);
+      int testCost = 15;
+      int result = newPastry.CalculatePastryCost();
+
+      Assert.AreEqual(testCost, result);
+    }
   }
 }
