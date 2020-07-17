@@ -35,7 +35,6 @@ namespace Bakery.Tests
       newPastry.AddToList(5);
       int testCost = 9;
       int result = newPastry.CalculatePastryCost();
-
       Assert.AreEqual(testCost, result);
     }
     [TestMethod]

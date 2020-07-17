@@ -10,7 +10,7 @@ namespace Bakery.Tests
   {
     public void Dispose()
     {
-    Bread.ClearAll();
+      Bread.ClearAll();
     }
 
     [TestMethod]
@@ -31,11 +31,11 @@ namespace Bakery.Tests
     [TestMethod]
     public void CalculateBreadCost_ReturnsCost_Int()
     {
-      int testBread = 5;
+       int testBread = 7;
       Bread newBread = new Bread(testBread);
-      int testCost = 15;
+      newBread.AddToList(5);
+      int testCost = 9;
       int result = newBread.CalculateBreadCost();
-
       Assert.AreEqual(testCost, result);
     }
     [TestMethod]
@@ -44,9 +44,7 @@ namespace Bakery.Tests
       int testEntry = 1;
       Bread newBread = new Bread (testEntry);
       List<int> testList = new List<int> {1};
-
       List<int> result = newBread.AddToList(1);
-
       CollectionAssert.AreEqual(testList, result);
     }
   }
