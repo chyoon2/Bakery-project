@@ -1,19 +1,17 @@
-// using Microsoft.VisualStudio.TestTools.UnitTesting;
-// using System.Collections.Generic;
-// using Bakery.Models;
-// using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Bakery.Models;
+using System;
 
-// namespace Bakery.Tests
-// {
-//   [TestClass]
-//   public class TranslateTests
-//   {
-//     [TestMethod]
-//     public void TranslateConstructor_CreatesInstanceofTranslate_Translate()
-//     {
-//       Translate newTranslate = new Translate(5);
-//       Assert.AreEqual(typeof(Translate), newTranslate.GetType());
-//     }
-
-//   }
-// }
+namespace Bakery.Tests
+{
+  [TestClass]
+  public class PastryTests
+  {
+    [TestMethod]
+    public void PastryConstructor_CreatesInstanceofPastry_Pastry()
+    {
+      Pastry newPastry = new Pastry();
+      Assert.AreEqual(typeof(Pastry), newPastry.GetType());
+    }
+  }
+}

@@ -1,6 +1,4 @@
 using System;
-// using Bread;
-// using Pastry.Models;
 
 namespace Bakery.Models
 {
@@ -10,6 +8,7 @@ namespace Bakery.Models
     {
       Bread newBread = new Bread(5);
       newBread.CalculateCost();
+
     }
   }
   
