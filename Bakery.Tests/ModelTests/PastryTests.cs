@@ -38,7 +38,8 @@ namespace Bakery.Tests
       Pastry newPastry = new Pastry (testEntry);
       List<int> testList = new List<int> {1};
 
-      List<int> result = newPastry.AddToList;
+      List<int> result = newPastry.AddToList(4);
+
       CollectionAssert.AreEqual(testList, result);
     }
   }

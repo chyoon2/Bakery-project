@@ -19,6 +19,11 @@ namespace Bakery.Models
       int cost = ((UserPastry/3)*5)+((UserPastry % 3)*2);
       return cost;
     }
+    public List<int> AddToList(int morePastry)
+    {
+      _queue.Add(morePastry);
+      return _queue;
+    }
   }
 }
 // namespace Bakery.Models
