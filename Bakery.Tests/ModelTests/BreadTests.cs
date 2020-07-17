@@ -9,10 +9,10 @@ namespace Bakery.Tests
   public class TranslateTests
   {
     [TestMethod]
-    public void TranslateConstructor_CreatesInstanceofTranslate_Translate()
+    public void BreadConstructor_CreatesInstanceofBread_Bread()
     {
-      Translate newTranslate = new Translate(5);
-      Assert.AreEqual(typeof(Translate), newTranslate.GetType());
+      Bread newBread = new Bread();
+      Assert.AreEqual(typeof(Bread), newBread.GetType());
     }
 
   }
