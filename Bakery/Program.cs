@@ -20,20 +20,23 @@ namespace Bakery.Models
       Bread newBread = new Bread(breadInput);
       int breadCost = newBread.CalculateBreadCost(breadInput);
 
+      
       Pastry newPastry = new Pastry(pastryInput);
       int pastryCost = newPastry.CalculatePastryCost(pastryInput);
+
+      int total = breadCost + pastryCost;
+      Console.WriteLine("Your total is $" + total);
+
       string more = "Y";
       while( more == "Y")
       {
         Console.WriteLine("How many more loaves of bread would you like?");
         string you = Console.ReadLine();
         Console.WriteLine("Do you want to add more bread?(Y/N)");
-        more = Console.ReadLine();
+        more = (Console.ReadLine()).ToUpper();
       }
      
 
-      int total = breadCost + pastryCost;
-      Console.WriteLine("Your total is $" + total);
     
 
     // List<IDataAccess> databases = new List<IDataAccess>() {

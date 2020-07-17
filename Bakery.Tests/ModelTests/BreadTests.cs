@@ -1,4 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections.Generic;
 using Bakery.Models;
 using System;
 
@@ -28,7 +29,7 @@ namespace Bakery.Tests
       int testBread = 5;
       Bread newBread = new Bread(testBread);
       int testCost = 15;
-      int result = newBread.CalculateBreadCost();
+      int result = newBread.CalculateBreadCost(testBread);
 
       Assert.AreEqual(testCost, result);
     }

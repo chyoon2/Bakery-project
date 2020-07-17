@@ -1,4 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections.Generic;
 using Bakery.Models;
 using System;
 
@@ -27,9 +28,18 @@ namespace Bakery.Tests
       int testPastry = 7;
       Pastry newPastry = new Pastry(testPastry);
       int testCost = 12;
-      int result = newPastry.CalculatePastryCost();
-
+      int result = newPastry.CalculatePastryCost(testPastry);
       Assert.AreEqual(testCost, result);
+    }
+    [TestMethod]
+    public void AddToList_ReturnsList_List()
+    {
+      int testEntry = 1;
+      Pastry newPastry = new Pastry (testEntry);
+      List<int> testList = new List<int> {1};
+
+      List<int> result = newPastry.AddToList;
+      CollectionAssert.AreEqual(testList, result);
     }
   }
 }

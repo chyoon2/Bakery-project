@@ -1,15 +1,19 @@
 using System;
+using System.Collections.Generic;
+
 
 namespace Bakery.Models
 {
-  public class Pastry : Bake
+  public class Pastry
   {
     public int UserPastry { get; }
+    private static List <int> _queue = new List<int> {};
 
     public Pastry(int pastryInput)
     {
       UserPastry = pastryInput;
     }
+
     public int CalculatePastryCost(int UserPastry) 
     {
       int cost = ((UserPastry/3)*5)+((UserPastry % 3)*2);
