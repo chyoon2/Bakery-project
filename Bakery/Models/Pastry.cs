@@ -2,7 +2,7 @@ using System;
 
 namespace Bakery.Models
 {
-  public class Pastry
+  public class Pastry: IDataAccess
   {
     public int UserPastry { get; }
 

@@ -2,7 +2,7 @@ using System;
 
 namespace Bakery.Models
 {
-  public class Bread
+  public class Bread: IDataAccess
   {
     public int UserBread { get; }
 
@@ -13,7 +13,6 @@ namespace Bakery.Models
     
     public int CalculateBreadCost() 
     {
-
       int cost = (UserBread - (UserBread/2)) * 5;
       return cost;
     }
