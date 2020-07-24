@@ -4,30 +4,26 @@ using System.Linq;
 
 namespace Bakery.Models
 {
-  public class Bread
+  public class Bread : Cart
   {
-    public int UserBread { get; }
     private static List <int> _queue = new List<int> {};
 
     public Bread(int breadInput)
     {
-      UserBread = breadInput;
+      Quantity = breadInput;
     }
-
-    public List<int> AddToList(int moreBread)
+    public List<int> AddToList()
     {
-      _queue.Add(moreBread);
+      _queue.Add(Quantity);
       return _queue;
     }
-    
-    public int CalculateCost() 
+    public override int CalculateCost() 
     {
       int amt = _queue.AsQueryable().Sum();
       int cost = (amt - (amt/2)) * 5;
       return cost;
     }
-
-     public static void ClearAll()
+    public static void ClearAll()
     {
       _queue.Clear();
     }

@@ -25,16 +25,16 @@ namespace Bakery.Tests
     {
       int testBread = 5;
       Bread newBread = new Bread(testBread);
-      int result = newBread.UserBread;
+      int result = newBread.Quantity;
       Assert.AreEqual(testBread, result);
     }
     [TestMethod]
     public void CalculateCost_ReturnsCost_Int()
     {
-       int testBread = 7;
+      int testBread = 7;
       Bread newBread = new Bread(testBread);
-      newBread.AddToList(5);
-      int testCost = 9;
+      newBread.AddToList();
+      int testCost = 20;
       int result = newBread.CalculateCost();
       Assert.AreEqual(testCost, result);
     }
@@ -44,7 +44,7 @@ namespace Bakery.Tests
       int testEntry = 1;
       Bread newBread = new Bread (testEntry);
       List<int> testList = new List<int> {1};
-      List<int> result = newBread.AddToList(1);
+      List<int> result = newBread.AddToList();
       CollectionAssert.AreEqual(testList, result);
     }
   }

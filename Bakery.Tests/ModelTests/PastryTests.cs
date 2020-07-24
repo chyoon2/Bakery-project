@@ -24,7 +24,7 @@ namespace Bakery.Tests
     {
       int testPastry = 5;
       Pastry newPastry = new Pastry(testPastry);
-      int result = newPastry.UserPastry;
+      int result = newPastry.Quantity;
       Assert.AreEqual(testPastry, result);
     }
      [TestMethod]
@@ -32,8 +32,8 @@ namespace Bakery.Tests
     {
       int testPastry = 7;
       Pastry newPastry = new Pastry(testPastry);
-      newPastry.AddToList(5);
-      int testCost = 9;
+      newPastry.AddToList();
+      int testCost = 12;
       int result = newPastry.CalculateCost();
       Assert.AreEqual(testCost, result);
     }
@@ -43,9 +43,7 @@ namespace Bakery.Tests
       int testEntry = 1;
       Pastry newPastry = new Pastry (testEntry);
       List<int> testList = new List<int> {1};
-
-      List<int> result = newPastry.AddToList(1);
-
+      List<int> result = newPastry.AddToList();
       CollectionAssert.AreEqual(testList, result);
     }
   }

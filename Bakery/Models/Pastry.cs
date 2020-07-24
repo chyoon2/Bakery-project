@@ -2,29 +2,26 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace Bakery.Models
 {
-  public class Pastry
+  public class Pastry : Cart
   {
-    public int UserPastry { get; }
     private static List <int> _queue = new List<int> {};
-
+    
     public Pastry(int pastryInput)
     {
-      UserPastry = pastryInput;
+      Quantity = pastryInput;
     }
 
-    public List<int> AddToList(int morePastry)
+    public List<int> AddToList()
     {
-      _queue.Add(morePastry);
+      _queue.Add(Quantity);
       return _queue;
     }
 
-    public int CalculateCost() 
+    public override int CalculateCost() 
     {
       int amt = _queue.AsQueryable().Sum();
-     
       int cost = ((amt/3)*5)+((amt % 3)*2);
       return cost;
     }
